@@ -7,14 +7,17 @@
     <groupId>com.github.lshtom</groupId>
     <artifactId>easy-rpc</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${easyrpc.version}</version>
     <modules>
         <module>common</module>
         <module>client</module>
         <module>server</module>
         <module>registry</module>
+        <module>spring-easyrpc-client</module>
+        <module>spring-easyrpc-server</module>
     </modules>
     <properties>
+        <easyrpc.version>1.0.0-SNAPSHOT</easyrpc.version>
         <thrift.version>0.13.0</thrift.version>
         <logback.version>1.2.3</logback.version>
     </properties>
@@ -31,6 +34,20 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--Junit4依赖-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!--Kryo依赖-->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
 
